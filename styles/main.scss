@@ -69,6 +69,8 @@ main {
             border-radius: 23px;
             padding: 20px;
             margin: 20px;
+            transition: 0.4s ease;
+            cursor: pointer;
             img {
                 position: absolute;
                 top: -15px;
@@ -76,6 +78,9 @@ main {
                 width: 40px;
                 opacity: 0.5;
             }
+        }
+        .panel:hover{
+            background-color: rgb(50, 50, 44);
         }
     }
 }
