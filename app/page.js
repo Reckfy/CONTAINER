@@ -1,6 +1,7 @@
 import '../styles/style.scss'
 import '../styles/main.scss'
-import Header from './components/Header';
+import Header from './components/Header'
+import Connect from './components/Connect'
 
 export default function Home() {
   return (
@@ -61,6 +62,10 @@ export default function Home() {
               <p>Возможность выкупа и работы с Poizon</p>
             </div>
           </div>
+        </div>
+        <div className='connector'>
+        <h2>СВЯЖИТЕСЬ С НАМИ ДЛЯ ПОЛУЧЕНИЯ КОНСУЛЬТАЦИИ</h2>
+        <Connect />
         </div>
       </main>
     </div>
