@@ -1,0 +1,81 @@
+main {
+    padding: 100px;
+    padding-top: 50px;
+
+    h1 {
+        font-size: 110px;
+        font-weight: 100;
+        margin-bottom: 120px;
+    }
+}
+
+.greyField {
+    padding: 50px;
+    background-color: rgb(55, 56, 44);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .textBlock{
+        max-width: 700px;
+        p {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .directorInfo{
+        max-width: 280px;
+        margin-left: 20px;
+        margin-top: -190px;
+        .avatar {
+            margin-left: -20px;
+            display: block;
+            width: 300px;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: rgb(131, 131, 131);
+        }
+        b {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        a {
+            margin: 5px;
+            img {
+                width: 35px;
+            }
+        }
+    }
+}
+
+.principes {
+    margin-top: 150px;
+    h2 {
+        font-size: 40px;
+        margin-bottom: 80px;
+    }
+    .panels {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .panel {
+            position: relative;
+            font-size: 20px;
+            width: 350px;
+            background-color: rgb(32, 32, 30);
+            border-radius: 23px;
+            padding: 20px;
+            margin: 20px;
+            img {
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                width: 40px;
+                opacity: 0.5;
+            }
+        }
+    }
+}

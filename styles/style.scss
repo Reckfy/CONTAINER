@@ -3,13 +3,21 @@
     margin: 0;
     padding: 0;
     color: rgb(215, 215, 215);
-    font-family: 'Arial', sans-serif;
+    font-family: 'roboto';
+    text-decoration: none;
 }
+
+@font-face {
+    font-family: 'roboto';  
+    src: url('/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;  
+    font-style: normal;  
+  }
 
 .containerStyle {
     background-color: black;
 }
 
 body {
-    background-color: rgb(18, 18, 18);
+    background-color: #131313;
 }
