@@ -2,6 +2,7 @@ import '../styles/style.scss'
 import '../styles/main.scss'
 import Header from './components/Header'
 import Connect from './components/Connect'
+import Botter from './components/Botter'
 
 export default function Home() {
   return (
@@ -65,9 +66,16 @@ export default function Home() {
         </div>
         <div className='connector'>
         <h2>СВЯЖИТЕСЬ С НАМИ ДЛЯ ПОЛУЧЕНИЯ КОНСУЛЬТАЦИИ</h2>
-        <Connect />
+        <div>
+          <img src='./images/consult.png'/>
+          <p>У Вас есть возможность заполнить данную анкету, указать удобный для Вас способ связи и описать интересующий вопрос.
+            Наш менеджер выйдет с Вами на связь в кратчайшие сроки и обязательно объяснит интересующий Вас вопрос!
+          </p>
+          <Connect />
+        </div>
         </div>
       </main>
+      <Botter />
     </div>
   );
 }
