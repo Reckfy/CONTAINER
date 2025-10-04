@@ -1,14 +1,9 @@
-import '../styles/style.scss'
-import '../styles/main.scss'
-import Header from './components/Header'
-import Connect from './components/Connect'
-import Botter from './components/Botter'
+import Connect from '../components/Connect'
+import './MainW.scss'
 
-export default function Home() {
-  return (
-    <div>
-      <Header />
-      <main>
+export default function Main() {
+    return (
+        <main>
         <h1>КОМПАНИЯ</h1>
         <div className='greyField'>
         <div className='textBlock'>
@@ -23,15 +18,15 @@ export default function Home() {
           </p>
         </div>
         <div className='directorInfo'>
-          <img className='avatar' src='./images/avatar.png' />
+          <img alt='avatar' className='avatar' src='./images/avatar.png' />
           <b>Понассийская Ирина</b>
           <p>Генеральный директор компании
             CONTAINER
           </p>
           <b>Контакты</b>
           <div>
-            <a href="https://wa.me/79887648351"><img src='./images/wa.svg' /></a>
-            <a href="https://t.me/Irina_workwithChina"><img src='./images/tg.svg' /></a>
+            <a href="https://wa.me/79887648351"><img alt='wa' src='./images/wa.svg' /></a>
+            <a href="https://t.me/Irina_workwithChina"><img alt='tg' src='./images/tg.svg' /></a>
           </div>
         </div>
         </div>
@@ -39,27 +34,27 @@ export default function Home() {
           <h2>РАБОТАЯ С НАМИ ВЫ ПОЛУЧАЕТЕ</h2>
           <div className='panels'>
             <div className='panel'>
-              <img src='./images/procent.png'/>
+              <img alt='' src='./images/procent.png'/>
               <p>Минимальную комиссию за доставку грузов</p>
             </div>
             <div className='panel'>
-              <img src='./images/phone.png'/>
+              <img alt='' src='./images/phone.png'/>
               <p>Постоянную связь с нашим менеджером</p>
             </div>
             <div className='panel'>
-              <img src='./images/valute.png'/>
+              <img alt='' src='./images/valute.png'/>
               <p>Лучшие условия по курсу валют</p>
             </div>
             <div className='panel'>
-              <img src='./images/speed.png'/>
+              <img alt='' src='./images/speed.png'/>
               <p>Короткие сроки доставки от 1 дня</p>
             </div>
             <div className='panel'>
-              <img src='./images/contract.png'/>
+              <img alt='' src='./images/contract.png'/>
               <p>Работаем только официально по договору</p>
             </div>
             <div className='panel'>
-              <img src='./images/poizon.png'/>
+              <img alt='' src='./images/poizon.png'/>
               <p>Возможность выкупа и работы с Poizon</p>
             </div>
           </div>
@@ -67,7 +62,7 @@ export default function Home() {
         <div className='connector'>
         <h2>СВЯЖИТЕСЬ С НАМИ ДЛЯ ПОЛУЧЕНИЯ КОНСУЛЬТАЦИИ</h2>
         <div>
-          <img src='./images/consult.png'/>
+          <img alt='' src='./images/consult.png'/>
           <p>У Вас есть возможность заполнить данную анкету, указать удобный для Вас способ связи и описать интересующий вопрос.
             Наш менеджер выйдет с Вами на связь в кратчайшие сроки и обязательно объяснит интересующий Вас вопрос!
           </p>
@@ -75,7 +70,5 @@ export default function Home() {
         </div>
         </div>
       </main>
-      <Botter />
-    </div>
-  );
+    );
 }

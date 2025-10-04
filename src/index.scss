@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(215, 215, 215);
+  font-family: 'roboto';
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'roboto';  
+  src: url('../public/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf') format('woff2');
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+.containerStyle {
+  background-color: black;
+}
+
+body {
+  background-color: #131313;
+}

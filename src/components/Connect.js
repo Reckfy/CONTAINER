@@ -1,6 +1,5 @@
-"use client";
 import React, { useState } from 'react';
-import '../../styles/connect.scss';
+import './Connect.scss';
 
 export default function Connect() {
   const [contactMethod, setContactMethod] = useState('telegram');
