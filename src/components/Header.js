@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import './Header.scss'
 
 function Header() {
@@ -16,15 +17,7 @@ function Header() {
             </div>
             </div> 
           <div className='wagon'>
-            <div className='container logo'><img alt='logo' src='./images/logo.jpg'/><h1>CONTAINER</h1></div>
-            <div className='wheels'>
-              <div></div>
-              <div></div>  
-            </div>
-          </div>  
-    
-          <div className='wagon'>
-            <div className='container'><Link to="/services">Услуги</Link></div>
+            <div className='container logo'><img alt='logo' src='./images/logo.png'/><h1>CONTAINER</h1></div>
             <div className='wheels'>
               <div></div>
               <div></div>  
@@ -34,6 +27,14 @@ function Header() {
           <div className='wagon'>
             <div className='container'><Link to="/">Компания</Link></div>
             <div className='wheels'>
+              <div></div>
+              <div></div>  
+            </div>
+          </div>  
+    
+          <div className='wagon'>
+             <div className='container'><HashLink to='/#connect'>Услуги</HashLink></div>
+          <div className='wheels'>
               <div></div>
               <div></div>  
             </div>

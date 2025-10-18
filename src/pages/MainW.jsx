@@ -19,7 +19,7 @@ export default function Main() {
         </div>
         <div className='directorInfo'>
           <img alt='avatar' className='avatar' src='./images/avatar.png' />
-          <b>Понассийская Ирина</b>
+          <b>Понасийская Ирина</b>
           <p>Генеральный директор компании
             CONTAINER
           </p>
@@ -66,7 +66,7 @@ export default function Main() {
           <p>У Вас есть возможность заполнить данную анкету, указать удобный для Вас способ связи и описать интересующий вопрос.
             Наш менеджер выйдет с Вами на связь в кратчайшие сроки и обязательно объяснит интересующий Вас вопрос!
           </p>
-          <Connect />
+          <Connect/>
         </div>
         </div>
       </main>

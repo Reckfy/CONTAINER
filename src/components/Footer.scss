@@ -1,0 +1,28 @@
+.footer {
+    background-color: rgb(64, 64, 64);
+    z-index: 10000;
+    p {padding: 5px;}
+    .contacts_footer {
+
+        padding: 40px;
+        display: flex;
+        //justify-content: space-between;
+        h2 {
+            font-size: 15px;
+            opacity: 0.5;
+            margin-left: 10px;
+        }
+        a {
+            margin: 5px;
+            font-size: 25px;
+        }
+        .contact {
+            margin-left: 30px;
+            margin-right: 100px;
+            div {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -7,6 +7,10 @@ main {
         font-weight: 100;
         margin-bottom: 120px;
     }
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
 }
 
 .greyField {
@@ -14,6 +18,7 @@ main {
     background-color: rgb(55, 56, 44);
     border-radius: 30px;
     display: flex;
+    max-width: 1300px;
     justify-content: space-between;
 
     .textBlock{
@@ -94,6 +99,7 @@ main {
             margin-right: 20px;
             margin-top: 300px;
             font-size: 18px;
+            max-width: 300px;
         }
         img {
             position: absolute;
