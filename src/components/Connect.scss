@@ -1,57 +1,56 @@
 .connect {
-    max-width: 850px;
-    font-family: Arial, sans-serif;
-    background-color: rgb(32, 32, 30);
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 10000;
-  }
-  
+  max-width: 850px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(32, 32, 30);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
   .row {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    margin-right: 20px;
-  
+
     label {
-        color: #949494;
-        font-size: 15px;
-      margin-bottom: 3px;
-        margin-left: 5px;
+      color: #949494;
+      font-size: 15px;
+      margin-bottom: 5px;
+      margin-left: 5px;
     }
-  
+
     input,
     select,
     textarea {
       border-radius: 7px;
       border: 1px solid #3a3a3a;
       background-color: #1c1b1b;
-      
       padding: 12px 15px;
       font-size: 16px;
       outline: none;
       transition: border-color 0.3s ease;
-  
+      width: 100%;
+
       &::placeholder {
         color: #949494;
       }
-  
+
       &:focus {
         border-color: #9f9f9f;
       }
     }
-  
+
     textarea {
-      width: 800px;
       resize: none;
       min-height: 200px;
     }
   }
-  
+
   .submitBtn {
-    min-width: 800px;
+    width: 100%;
     padding: 15px;
     border-radius: 12px;
     border: none;
@@ -61,9 +60,67 @@
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  
+
     &:hover {
       background-color: #ffffff;
     }
   }
-  
+
+  /* ---------- АДАПТИВ ---------- */
+  @media (max-width: 992px) {
+    padding: 30px;
+    .row input,
+    .row select,
+    .row textarea {
+      font-size: 15px;
+    }
+    .submitBtn {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 25px;
+    .row {
+      margin-right: 0;
+    }
+    .row label {
+      font-size: 14px;
+    }
+    .row input,
+    .row select,
+    .row textarea {
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+    .row textarea {
+      min-height: 160px;
+    }
+    .submitBtn {
+      font-size: 16px;
+      padding: 13px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    border-radius: 15px;
+    .row label {
+      font-size: 13px;
+    }
+    .row input,
+    .row select,
+    .row textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+    .row textarea {
+      min-height: 140px;
+    }
+    .submitBtn {
+      font-size: 15px;
+      padding: 12px;
+    }
+  }
+}

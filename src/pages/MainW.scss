@@ -1,16 +1,35 @@
 main {
     padding: 100px;
-    padding-top: 50px;
+    padding-top: 200px;
 
     h1 {
         font-size: 110px;
         font-weight: 100;
         margin-bottom: 120px;
     }
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: center;
+
+    @media (max-width: 1200px) {
+        padding: 80px 40px;
+        h1 {
+            font-size: 80px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 20px;
+        h1 {
+            font-size: 50px;
+            margin-bottom: 80px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 40px 15px;
+        h1 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
 }
 
 .greyField {
@@ -18,35 +37,43 @@ main {
     background-color: rgb(55, 56, 44);
     border-radius: 30px;
     display: flex;
+    flex-wrap: wrap;
     max-width: 1300px;
     justify-content: space-between;
 
-    .textBlock{
+    .textBlock {
         max-width: 700px;
+
         p {
             font-size: 25px;
             margin-bottom: 10px;
         }
     }
 
-    .directorInfo{
+    .directorInfo {
         max-width: 280px;
         margin-left: 20px;
         margin-top: -190px;
+        text-align: center;
+
         .avatar {
-            margin-left: -20px;
+            margin-left: auto;
             display: block;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
         }
+
         p {
             font-size: 15px;
             margin-bottom: 10px;
             color: rgb(131, 131, 131);
         }
+
         b {
             font-size: 18px;
             margin-bottom: 10px;
         }
+
         a {
             margin: 5px;
             img {
@@ -54,18 +81,51 @@ main {
             }
         }
     }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .textBlock {
+            max-width: 100%;
+            p {
+                font-size: 22px;
+            }
+        }
+
+        .directorInfo {
+            margin: 40px 0 0;
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 30px;
+        .textBlock p {
+            font-size: 18px;
+        }
+        .directorInfo p {
+            font-size: 14px;
+        }
+    }
 }
 
 .principes {
     margin-top: 150px;
+
     h2 {
         font-size: 40px;
         margin-bottom: 80px;
     }
+
     .panels {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        justify-content: center;
+
         .panel {
             position: relative;
             font-size: 20px;
@@ -76,6 +136,7 @@ main {
             margin: 20px;
             transition: 0.4s ease;
             cursor: pointer;
+
             img {
                 position: absolute;
                 top: -15px;
@@ -83,32 +144,90 @@ main {
                 width: 40px;
                 opacity: 0.5;
             }
+
+            &:hover {
+                background-color: rgb(50, 50, 44);
+            }
         }
-        .panel:hover{
-            background-color: rgb(50, 50, 44);
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+        .panel {
+            width: 100%;
+            max-width: 400px;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 26px;
+        }
+        .panel {
+            font-size: 16px;
+            margin: 15px 0;
         }
     }
 }
 
 .connector {
     margin-top: 150px;
+
     div {
         display: flex;
+        flex-direction: row;
         position: relative;
+
         p {
             margin-right: 20px;
             margin-top: 300px;
             font-size: 18px;
             max-width: 300px;
         }
+
         img {
             position: absolute;
             opacity: 0.3;
             max-width: 300px;
         }
     }
+
     h2 {
         font-size: 30px;
         margin-bottom: 60px;
+    }
+
+    @media (max-width: 992px) {
+        div {
+            flex-direction: column;
+            // align-items: center;
+            p {
+                margin: 20px 0;
+                max-width: 100%;
+                text-align: center;
+            }
+            img {
+                position: relative;
+                margin: auto;
+                opacity: 0.4;
+            }
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 100px;
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
 }

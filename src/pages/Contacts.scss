@@ -2,7 +2,7 @@
     color: #e0e0e0;
     min-height: 80vh;
     max-width: 800px;
-    margin: 0 200px;
+    margin: 0 auto;
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
@@ -51,26 +51,26 @@
         color: #ffec5c;
       }
     }
-
+  
     .tg {
-        text-decoration: none;
-        color: #4ecaff;
-        transition: color 0.2s ease;
-    
-        &:hover {
-          color: #5cf1ff;
-        }
+      text-decoration: none;
+      color: #4ecaff;
+      transition: color 0.2s ease;
+  
+      &:hover {
+        color: #5cf1ff;
       }
-
-      .wa {
-        text-decoration: none;
-        color: #5dff4e;
-        transition: color 0.2s ease;
-    
-        &:hover {
-          color: #8dff5c;
-        }
+    }
+  
+    .wa {
+      text-decoration: none;
+      color: #9bf793;
+      transition: color 0.2s ease;
+  
+      &:hover {
+        color: #befaa5;
       }
+    }
   
     hr {
       border: none;
@@ -78,16 +78,84 @@
       margin: 0;
     }
   
-    @media (max-width: 600px) {
-      padding: 60px 15px;
-      gap: 40px;
+    /* ---------- АДАПТИВ ---------- */
+  
+    @media (max-width: 1200px) {
+      max-width: 700px;
   
       &__title {
-        font-size: 36px;
+        font-size: 70px;
+      }
+    }
+  
+    @media (max-width: 992px) {
+      max-width: 600px;
+      gap: 45px;
+      padding: 70px 30px;
+  
+      &__title {
+        font-size: 60px;
       }
   
       &__main {
         font-size: 20px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 60px 20px;
+      gap: 40px;
+  
+      &__title {
+        font-size: 46px;
+        letter-spacing: 0.5px;
+      }
+  
+      &__main {
+        font-size: 19px;
+      }
+  
+      &__sub {
+        font-size: 15px;
+      }
+  
+      .link,
+      .tg,
+      .wa {
+        font-size: 15px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 50px 15px;
+      gap: 30px;
+      text-align: center;
+  
+      &__title {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+  
+      &__section {
+        align-items: center;
+      }
+  
+      &__main {
+        font-size: 17px;
+      }
+  
+      &__sub {
+        font-size: 14px;
+      }
+  
+      .link,
+      .tg,
+      .wa {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 14px;
       }
     }
   }

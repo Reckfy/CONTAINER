@@ -1,25 +1,192 @@
 header {
-    background-color: rgb(7, 7, 7);
+    background-color: #191919;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //border-bottom: 1px solid rgb(77, 77, 77);
-    .logo{
+    padding: 15px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+  
+      img {
+        width: 85px;
+        height: auto;
+      }
+  
+      .textBlock {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+  
+        h1 {
+          color: #d0a342;
+          font-size: 34px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          margin-bottom: 3px;
+        }
+  
+        span {
+          font-size: 11px;
+          color: #a0a0a0;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
     }
-    h1 {
-        color: rgb(208, 163, 66);
-        font-size: 50px;
-        margin-left: -18px;
+  
+    .navDesktop {
+      display: flex;
+      gap: 50px;
+  
+      a {
+        color: #e2e2e2;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #f8d26a;
+        }
+  
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          width: 0;
+          height: 2px;
+          background: #f8d26a;
+          transition: width 0.3s ease;
+        }
+  
+        &:hover::after {
+          width: 100%;
+        }
+      }
     }
-    a {
-        margin-right: 90px;
-        font-size: 30px;
+  
+    /* ---------- Бургер ---------- */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 26px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1100;
+  
+      span {
+        height: 3px;
+        width: 100%;
+        background-color: #f8d26a;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+  
+      &.active span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+  
+      &.active span:nth-child(2) {
+        opacity: 0;
+      }
+  
+      &.active span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+      }
     }
-    img {
-        margin-left: 40px;
-        width: 150px;
-       // height: 200px;
+  
+    /* ---------- Мобильное меню ---------- */
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #111;
+      padding: 100px 40px;
+      gap: 30px;
+      transition: right 0.4s ease;
+      box-shadow: -2px 0 15px rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+  
+      a {
+        color: #e2e2e2;
+        font-size: 22px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #f8d26a;
+        }
+      }
+  
+      &.show {
+        right: 0;
+      }
     }
-}
+  
+    /* ---------- Адаптив ---------- */
+    @media (max-width: 992px) {
+      padding: 15px 25px;
+  
+      .navDesktop {
+        display: none;
+      }
+  
+      .menu-btn {
+        display: flex;
+      }
+  
+      .logo img {
+        width: 70px;
+      }
+  
+      .logo h1 {
+        font-size: 28px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 12px 20px;
+  
+      .logo img {
+        width: 60px;
+      }
+  
+      .logo h1 {
+        font-size: 24px;
+      }
+  
+      .mobile-nav a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  /* ---------- Анимация появления/исчезновения ---------- */
+header {
+    transition: transform 0.4s ease, background-color 0.3s ease;
+  }
+  
+  header.hide {
+    transform: translateY(-100%);
+  }
+  
+  header.show {
+    transform: translateY(0);
+  }
+  
