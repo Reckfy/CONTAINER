@@ -68,6 +68,16 @@ export default function Connect() {
         if (!response.ok) throw new Error('Ошибка сети');
         return response.json();
       })
+      .then(() => {
+        alert('Сообщение успешно отправлено!');
+        setName('');
+        setContactValue('');
+        setComment('');
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Произошла ошибка при отправке сообщения. Пожалуйста, повторите попытку позже или свяжитесь с нами по другому каналу связи!');
+      });
   }
 
   return (
@@ -114,7 +124,7 @@ export default function Connect() {
       </div>
 
       <div className="row">
-        <label>Комментарий</label>
+        <label>Сообщение</label>
         <textarea
           placeholder="Введите сообщение"
           value={comment}
@@ -124,7 +134,7 @@ export default function Connect() {
       </div>
 
       <button type="submit" className="submitBtn">
-        Получить консультацию
+        Отправить сообщение
       </button>
     </form>
   );
