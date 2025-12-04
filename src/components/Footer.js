@@ -7,19 +7,22 @@ function Botter() {
             <div className='contact'>
                 <h2>Контакты</h2>
                 <div>
-                    <a href="tel:+7-988-764-83-51">+7-988-764-83-51</a>
-                    <a href="https://wa.me/79887648351"><img alt='' src='./images/wa.svg' /></a>
-                    <a href="https://t.me/Irina_workwithChina"><img alt='' src='./images/tg.svg' /></a>
+                    <a href="tel:+79246708370">+7-924-670-83-70</a>
+                    <a href="https://wa.me/79246708370"><img alt='' src='./images/wa.svg' /></a>
+                    <a href="https://t.me/lc_container"><img alt='' src='./images/tg.svg' /></a>
                 </div>
             </div>
             <div className='contact'>
                 <h2>Email</h2>
                 <div>
-                    <a href="mailto:ilc-container@gmail.com">ilc-container@gmail.com</a>
+                    <a href="mailto:container.ilc@gmail.com">container.ilc@gmail.com</a>
                 </div>
             </div>
             </div>
-            <p>© 2022 - 2025 CONTAINER. Все права защищены</p>
+            <div className='under_footer'>
+                <p>© 2022 - 2025 CONTAINER. Все права защищены</p>
+                <p>Разработано <a href='https://t.me/xrororo'>Reckfy</a></p>
+            </div>
         </div>
       );
 }
