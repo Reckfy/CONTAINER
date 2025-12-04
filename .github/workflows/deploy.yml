@@ -1,19 +1,19 @@
-name: Deploy React to Server
+name: Deploy React App
 
 on:
   push:
     branches:
-      - main
+      - main  # ветка для деплоя
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
+    - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 22
@@ -24,14 +24,21 @@ jobs:
     - name: Build React
       run: npm run build
 
-    - name: Deploy to server via SSH
+    - name: Deploy build via SCP
+      uses: appleboy/scp-action@v0.1.5
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: deployer
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        port: 22
+        source: "build/"
+        target: "/var/www/CONTAINER/"
+
+    - name: Reload nginx
       uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.SERVER_IP }}
         username: deployer
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
-        script: |
-          mkdir -p /var/www/CONTAINER
-          rm -rf /var/www/CONTAINER/build
-          cp -r ./build /var/www/CONTAINER/
+        script: sudo systemctl reload nginx
