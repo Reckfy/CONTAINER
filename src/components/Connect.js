@@ -57,7 +57,7 @@ export default function Connect() {
       comment,
     };
 
-    fetch('http://localhost:5001/submit', {
+    fetch('http://127.0.0.1:5001/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
