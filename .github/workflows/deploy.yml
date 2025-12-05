@@ -41,4 +41,4 @@ jobs:
         username: deployer
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
-        script: sudo systemctl reload nginx
+        script: systemctl reload nginx
