@@ -25,8 +25,8 @@ export default function Main() {
           </p>
           <b>Контакты</b>
           <div>
-            <a href="https://wa.me/79887648351"><img alt='wa' src='./images/wa.svg' /></a>
-            <a href="https://t.me/Irina_workwithChina"><img alt='tg' src='./images/tg.svg' /></a>
+            <a href="https://wa.me/79246708370"><img alt='wa' src='./images/wa.svg' /></a>
+            <a href="https://t.me/lc_container"><img alt='tg' src='./images/tg.svg' /></a>
           </div>
         </div>
         </div>
