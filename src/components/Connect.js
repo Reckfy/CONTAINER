@@ -54,15 +54,15 @@ export default function Connect() {
       contactMethod,
       name,
       contactValue,
-      comment,
+      comment
     };
 
     fetch('/submit', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     })
       .then((response) => {
         if (!response.ok) throw new Error('Ошибка сети');
@@ -76,7 +76,9 @@ export default function Connect() {
       })
       .catch((error) => {
         console.error(error);
-        alert('Произошла ошибка при отправке сообщения. Пожалуйста, повторите попытку позже или свяжитесь с нами по другому каналу связи!');
+        alert(
+          'Произошла ошибка при отправке сообщения. Пожалуйста, повторите попытку позже или свяжитесь с нами по другому каналу связи!'
+        );
       });
   }
 
@@ -95,7 +97,10 @@ export default function Connect() {
 
       <div className="row">
         <label>Способ связи</label>
-        <select value={contactMethod} onChange={(e) => setContactMethod(e.target.value)}>
+        <select
+          value={contactMethod}
+          onChange={(e) => setContactMethod(e.target.value)}
+        >
           <option value="Telegram">Телеграм</option>
           <option value="Email">Email</option>
           <option value="Phone">Телефон</option>
@@ -114,13 +119,15 @@ export default function Connect() {
             contactMethod === 'Telegram'
               ? 'Введите Telegram'
               : contactMethod === 'Email'
-              ? 'Введите Email'
-              : 'Введите номер'
+                ? 'Введите Email'
+                : 'Введите номер'
           }
           value={contactValue}
           onChange={(e) => setContactValue(e.target.value)}
         />
-        {errors.contactValue && <div className="error">{errors.contactValue}</div>}
+        {errors.contactValue && (
+          <div className="error">{errors.contactValue}</div>
+        )}
       </div>
 
       <div className="row">

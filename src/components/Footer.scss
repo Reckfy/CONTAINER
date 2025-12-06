@@ -1,127 +1,125 @@
 .footer {
-    background-color: rgb(23, 23, 23);
-    z-index: 10000;
-    color: #f2f2f2;
-    font-family: 'Inter', 'Arial', sans-serif;
-  
-    p {
-      padding: 15px;
-      padding-top: 0;
+  background-color: rgb(23, 23, 23);
+  z-index: 10000;
+  color: #f2f2f2;
+  font-family: 'Inter', 'Arial', sans-serif;
+
+  p {
+    padding: 15px;
+    padding-top: 0;
+  }
+
+  .contacts_footer {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    h2 {
+      font-size: 15px;
+      opacity: 0.6;
+      margin-left: 10px;
+      font-weight: 400;
     }
-  
-    .contacts_footer {
-      padding: 40px;
+
+    a {
+      margin: 5px;
+      font-size: 25px;
+      color: #fff;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ffd45c;
+      }
+      img {
+        width: 25px;
+      }
+    }
+
+    .contact {
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 30px;
-  
-      h2 {
-        font-size: 15px;
-        opacity: 0.6;
-        margin-left: 10px;
-        font-weight: 400;
-      }
-  
-      a {
-        margin: 5px;
-        font-size: 25px;
-        color: #fff;
-        transition: color 0.2s ease;
-  
-        &:hover {
-          color: #ffd45c;
-        }
-        img {
-            width: 25px;
-        }
-      }
-  
-      .contact {
-        display: flex;
-        flex-direction: column;
-        margin-left: 30px;
-        margin-right: 100px;
-  
-        div {
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-  
-    .under_footer {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+      flex-direction: column;
+      margin-left: 30px;
+      margin-right: 100px;
 
-
-    /* ---------- АДАПТИВ ---------- */
-  
-    @media (max-width: 992px) {
-      .contacts_footer {
-        padding: 30px;
-        gap: 25px;
-  
-        .contact {
-          margin-right: 60px;
-        }
-  
-        h2 {
-          font-size: 14px;
-        }
-  
-        a {
-          font-size: 22px;
-        }
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .contacts_footer {
-        flex-direction: column;
+      div {
+        display: flex;
         align-items: center;
-        text-align: center;
-        padding: 30px 20px;
-        gap: 20px;
-  
-        .contact {
-          margin: 0;
-          align-items: center;
-  
-          div {
-            justify-content: center;
-          }
-        }
-  
-        h2 {
-          font-size: 14px;
-          margin-left: 0;
-        }
-  
-        a {
-          font-size: 22px;
-        }
-      }
-    }
-  
-    @media (max-width: 480px) {
-      .contacts_footer {
-        padding: 25px 15px;
-        gap: 15px;
-  
-        h2 {
-          font-size: 13px;
-          opacity: 0.7;
-        }
-  
-        a {
-          font-size: 20px;
-          margin: 4px;
-        }
       }
     }
   }
-  
+
+  .under_footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- АДАПТИВ ---------- */
+
+  @media (max-width: 992px) {
+    .contacts_footer {
+      padding: 30px;
+      gap: 25px;
+
+      .contact {
+        margin-right: 60px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contacts_footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+      gap: 20px;
+
+      .contact {
+        margin: 0;
+        align-items: center;
+
+        div {
+          justify-content: center;
+        }
+      }
+
+      h2 {
+        font-size: 14px;
+        margin-left: 0;
+      }
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contacts_footer {
+      padding: 25px 15px;
+      gap: 15px;
+
+      h2 {
+        font-size: 13px;
+        opacity: 0.7;
+      }
+
+      a {
+        font-size: 20px;
+        margin: 4px;
+      }
+    }
+  }
+}

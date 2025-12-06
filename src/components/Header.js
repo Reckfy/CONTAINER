@@ -1,53 +1,61 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import './Header.scss'
+import './Header.scss';
 
 function Header() {
+  return (
+    <header>
+      <div className="background">
+        <div className="mountains">
+          <div className="mountain mountain5"></div>
+          <div className="mountain mountain4"></div>
+          <div className="mountain mountain3"></div>
+          <div className="mountain mountain2"></div>
+          <div className="mountain mountain1"></div>
+        </div>
+      </div>
+      <div className="wagon">
+        <div className="container logo">
+          <img alt="logo" src="./images/logo.png" />
+          <h1>CONTAINER</h1>
+        </div>
+        <div className="wheels">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
 
-    return (
-        <header>
-          <div className='background'>
-            <div className="mountains">
-              <div className="mountain mountain5"></div>
-              <div className="mountain mountain4"></div>
-              <div className="mountain mountain3"></div>
-              <div className="mountain mountain2"></div>
-              <div className="mountain mountain1"></div>
-            </div>
-            </div> 
-          <div className='wagon'>
-            <div className='container logo'><img alt='logo' src='./images/logo.png'/><h1>CONTAINER</h1></div>
-            <div className='wheels'>
-              <div></div>
-              <div></div>  
-            </div>
-          </div>  
-    
-          <div className='wagon'>
-            <div className='container'><Link to="/">Компания</Link></div>
-            <div className='wheels'>
-              <div></div>
-              <div></div>  
-            </div>
-          </div>  
-    
-          <div className='wagon'>
-             <div className='container'><HashLink to='/#connect'>Услуги</HashLink></div>
-          <div className='wheels'>
-              <div></div>
-              <div></div>  
-            </div>
-          </div>  
-    
-          <div className='wagon'>
-            <div className='container'><Link to="/contacts">Контакты</Link></div>
-            <div className='wheels'>
-              <div></div>
-              <div></div>  
-            </div>
-          </div>  
-        </header>
-      );
+      <div className="wagon">
+        <div className="container">
+          <Link to="/">Компания</Link>
+        </div>
+        <div className="wheels">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div className="wagon">
+        <div className="container">
+          <HashLink to="/#connect">Услуги</HashLink>
+        </div>
+        <div className="wheels">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div className="wagon">
+        <div className="container">
+          <Link to="/contacts">Контакты</Link>
+        </div>
+        <div className="wheels">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+  );
 }
 export default Header;

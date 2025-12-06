@@ -1,13 +1,8 @@
-import './Services.scss'
-import React from 'react'
+import './Services.scss';
+import React from 'react';
 
-function Services(){
-
-    return(
-        <div>
-            УСЛУГИ
-        </div>
-    );
+function Services() {
+  return <div>УСЛУГИ</div>;
 }
 
 export default Services;

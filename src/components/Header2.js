@@ -26,7 +26,9 @@ function Header2() {
   }, [lastScrollY]);
 
   return (
-    <header className={`${menuOpen ? 'open' : ''} ${visible ? 'show' : 'hide'}`}>
+    <header
+      className={`${menuOpen ? 'open' : ''} ${visible ? 'show' : 'hide'}`}
+    >
       <div className="logo">
         <img alt="logo" src="./images/logo.png" />
         <div className="textBlock">
@@ -37,7 +39,9 @@ function Header2() {
 
       <nav className="navDesktop">
         <Link to="/">Компания</Link>
-        <HashLink smooth to="/#connect">Услуги</HashLink>
+        <HashLink smooth to="/#connect">
+          Услуги
+        </HashLink>
         <Link to="/contacts">Контакты</Link>
       </nav>
 
@@ -52,9 +56,15 @@ function Header2() {
       </button>
 
       <nav className={`mobile-nav ${menuOpen ? 'show' : ''}`}>
-        <HashLink smooth to="/" onClick={() => setMenuOpen(false)}>Компания</HashLink>
-        <HashLink smooth to="/#connect" onClick={() => setMenuOpen(false)}>Услуги</HashLink>
-        <Link to="/contacts" onClick={() => setMenuOpen(false)}>Контакты</Link>
+        <HashLink smooth to="/" onClick={() => setMenuOpen(false)}>
+          Компания
+        </HashLink>
+        <HashLink smooth to="/#connect" onClick={() => setMenuOpen(false)}>
+          Услуги
+        </HashLink>
+        <Link to="/contacts" onClick={() => setMenuOpen(false)}>
+          Контакты
+        </Link>
       </nav>
     </header>
   );
