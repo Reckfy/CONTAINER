@@ -233,3 +233,37 @@ main {
     }
   }
 }
+
+.channel_block{
+    margin-top: 180px;
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 20px;
+    }
+    a {
+        margin-top: 10px;
+        font-size: 25px;
+        color: #4ecaff;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #5cf1ff;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 100px;
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        a {
+          font-size: 20px;
+        }
+      }
+  }

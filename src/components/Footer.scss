@@ -55,6 +55,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    a {
+        color: #fff;
+        transition: color 0.2s ease;
+  
+        &:hover {
+          color: #ffd45c;
+        }
+      }
   }
 
   /* ---------- АДАПТИВ ---------- */

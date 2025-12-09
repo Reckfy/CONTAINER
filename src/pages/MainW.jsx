@@ -24,10 +24,10 @@ export default function Main() {
           <p>Генеральный директор компании CONTAINER</p>
           <b>Контакты</b>
           <div>
-            <a href="https://wa.me/79246708370">
+            <a href="https://wa.me/79246708370" target="_blank" rel="noopener noreferrer nofollow">
               <img alt="wa" src="./images/wa.svg" />
             </a>
-            <a href="https://t.me/lc_container">
+            <a href="https://t.me/lc_container" target="_blank" rel="noopener noreferrer nofollow">
               <img alt="tg" src="./images/tg.svg" />
             </a>
           </div>
@@ -73,6 +73,11 @@ export default function Main() {
           </p>
           <Connect />
         </div>
+      </div>
+      <div className='channel_block'>
+        <h2>ГРУППА ТЕЛЕГРАМ</h2>
+        <p>Переходите в нашу группу Телеграм. Там мы выкладываем интересные предложения, делимся информацией о методах нашей работы, рассказываем новости, связанные с миром логистики!</p>
+        <a href='https://t.me/logistic_container' target="_blank" rel="noopener noreferrer nofollow">Кликай и переходи к нам!</a>
       </div>
     </main>
   );
