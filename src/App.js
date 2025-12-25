@@ -6,6 +6,8 @@ import Main from './pages/MainW';
 import Services from './pages/Services';
 import Contacts from './pages/Contacts';
 
+export const MAIL = 'ilc.container888@gmail.com';
+
 function App() {
   return (
     <div>

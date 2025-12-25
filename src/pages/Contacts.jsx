@@ -1,4 +1,5 @@
 import './Contacts.scss';
+import {MAIL} from '../App';
 
 export default function Contacts() {
   return (
@@ -51,11 +52,11 @@ export default function Contacts() {
       <div className="contacts__section">
         <h3>Email</h3>
         <a
-          href="mailto:container.ilc@gmail.com"
+          href={`mailto:${MAIL}`}
           className="contacts__main link"
           target="_blank" rel="noopener noreferrer nofollow"
         >
-          container.ilc@gmail.com{' '}
+          {MAIL}{' '}
         </a>
       </div>
 

@@ -1,4 +1,5 @@
 import './Footer.scss';
+import {MAIL} from '../App';
 
 function Botter() {
   return (
@@ -19,7 +20,7 @@ function Botter() {
         <div className="contact">
           <h2>Email</h2>
           <div>
-            <a href="mailto:container.ilc@gmail.com" target="_blank" rel="noopener noreferrer nofollow">container.ilc@gmail.com</a>
+            <a href={`mailto:${MAIL}`} target="_blank" rel="noopener noreferrer nofollow">{MAIL}</a>
           </div>
         </div>
       </div>
