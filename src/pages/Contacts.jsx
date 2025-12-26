@@ -21,7 +21,7 @@ export default function Contacts() {
 
       <div className="contacts__section">
         <h3>WeChat</h3>
-        <img className="qr" src='/images/qr-wechat.jpg'></img>
+        <img className="qr" alt='qr)' src='/images/qr-wechat.jpg'></img>
       </div>
 
       <hr />
