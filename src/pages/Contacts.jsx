@@ -8,13 +8,20 @@ export default function Contacts() {
 
       <div className="contacts__section">
         <h3>Телефон</h3>
-        <a href="tel:+79246708370" className="contacts__main" target="_blank" rel="noopener noreferrer nofollow">
-          +7-924-670-83-70
+        <a href="tel:+79881001888" className="contacts__main" target="_blank" rel="noopener noreferrer nofollow">
+          +7(988)100-18-88
         </a>
         <a href="tel:+79145560854" className="contacts__main" target="_blank" rel="noopener noreferrer nofollow">
-          +7-914-556-08-54
+          +7(914)556-08-54
         </a>
         <p className="contacts__sub">Пн-Вс 24 часа</p>
+      </div>
+
+      <hr />
+
+      <div className="contacts__section">
+        <h3>WeChat</h3>
+        <img className="qr" src='/images/qr-wechat.jpg'></img>
       </div>
 
       <hr />
@@ -39,11 +46,11 @@ export default function Contacts() {
 
       <div className="contacts__section">
         <h3>WhatsApp</h3>
-        <a href="https://wa.me/79246708370" className="contacts__main wa" target="_blank" rel="noopener noreferrer nofollow">
-          8-924-670-83-70
+        <a href="https://wa.me/79881001888" className="contacts__main wa" target="_blank" rel="noopener noreferrer nofollow">
+          8(988)100-18-88
         </a>
         <a href="https://wa.me/79145560854" className="contacts__main wa" target="_blank" rel="noopener noreferrer nofollow">
-          8-914-556-08-54
+          8(914)556-08-54
         </a>
       </div>
 

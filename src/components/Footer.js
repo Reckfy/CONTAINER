@@ -1,15 +1,15 @@
 import './Footer.scss';
 import {MAIL} from '../App';
 
-function Botter() {
+function Footer() {
   return (
     <div className="footer">
       <div className="contacts_footer">
         <div className="contact">
           <h2>Контакты</h2>
           <div>
-            <a href="tel:+79246708370" target="_blank" rel="noopener noreferrer nofollow">+7-924-670-83-70</a>
-            <a href="https://wa.me/79246708370" target="_blank" rel="noopener noreferrer nofollow">
+            <a href="tel:+79881001888" target="_blank" rel="noopener noreferrer nofollow">+7(988)100-18-88</a>
+            <a href="https://wa.me/79881001888" target="_blank" rel="noopener noreferrer nofollow">
               <img alt="" src="./images/wa.svg" />
             </a>
             <a href="https://t.me/lc_container" target="_blank" rel="noopener noreferrer nofollow">
@@ -34,4 +34,4 @@ function Botter() {
   );
 }
 
-export default Botter;
+export default Footer;

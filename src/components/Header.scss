@@ -1,145 +1,193 @@
 header {
-  background-color: rgb(37 37 37);
+  background-color: #191919;
   display: flex;
-  align-items: end;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  height: 330px;
-
-  .wagon {
-    z-index: 99;
-    padding: 30px 10px 0;
-  }
-
-  .container {
-    width: 274px;
-    height: 142px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      height: 160px;
-    }
-
-    background: repeating-linear-gradient(
-      to right,
-      black 0,
-      black 10px,
-      rgb(20 20 20) 10px,
-      rgb(20 20 20) 200px
-    );
-    border: 2px solid black;
-    border-radius: 7px;
-    z-index: 1000;
-
-    a {
-      opacity: 0.5;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-      font-size: 30px;
-    }
-
-    a:hover {
-      opacity: 0.8;
-    }
-  }
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   .logo {
-    justify-content: start;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
-    h1 {
-      color: #ba852a;
-      opacity: 1;
-      font-size: 25px;
-      cursor: auto;
-      margin-left: -5px;
+    img {
+      width: 85px;
+      height: auto;
+    }
 
-      &:hover {
-        opacity: 1;
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        color: #d0a342;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 3px;
+      }
+
+      span {
+        font-size: 11px;
+        color: #a0a0a0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
     }
   }
 
-  .wheels {
+  .navDesktop {
     display: flex;
-    position: relative;
-    justify-content: space-between;
-    margin: 0 15px;
+    gap: 50px;
 
-    div {
+    a {
+      color: #e2e2e2;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
       position: relative;
-      bottom: 25px;
-      width: 50px;
-      height: 50px;
-      background-color: black;
-      border-radius: 50%;
-      z-index: -1;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #f8d26a;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #f8d26a;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  /* ---------- Бургер ---------- */
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+
+    span {
+      height: 3px;
+      width: 100%;
+      background-color: #f8d26a;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+  }
+
+  /* ---------- Мобильное меню ---------- */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #111;
+    padding: 100px 40px;
+    gap: 30px;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+
+    a {
+      color: #e2e2e2;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #f8d26a;
+      }
+    }
+
+    &.show {
+      right: 0;
+    }
+  }
+
+  /* ---------- Адаптив ---------- */
+  @media (max-width: 992px) {
+    padding: 15px 25px;
+
+    .navDesktop {
+      display: none;
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+
+    .logo img {
+      width: 70px;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 20px;
+
+    .logo img {
+      width: 60px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+    }
+
+    .mobile-nav a {
+      font-size: 20px;
     }
   }
 }
 
-.background {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-color: #131313;
+/* -------- Анимация появления/исчезновения ---------- */
+header {
+  transition:
+    transform 0.4s ease,
+    background-color 0.3s ease;
 }
 
-.mountains {
-  opacity: 0.65;
+header.hide {
+  transform: translateY(-100%);
 }
 
-.mountain {
-  position: absolute;
-  bottom: 28px;
-  left: 0;
-  width: 100vw;
-  background: 0 0 / contain repeat-x;
-  transition: background-position 0.3s ease-in-out;
-  animation-name: mountain-move;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  &1 {
-    height: 125px;
-    background-image: url('../../public/images/mountains/mountain1.svg');
-    background-position-y: 40px;
-    animation-duration: 5s;
-  }
-
-  &2 {
-    height: 153px;
-    background-image: url('../../public/images/mountains/mountain2.svg');
-    background-position-y: 70px;
-    animation-duration: 9s;
-  }
-
-  &3 {
-    height: 245px;
-    background-image: url('../../public/images/mountains/mountain3.svg');
-    background-position-y: 100px;
-    animation-duration: 18s;
-  }
-
-  &4 {
-    height: 292px;
-    background-image: url('../../public/images/mountains/mountain4.svg');
-    background-position-y: 130px;
-    animation-duration: 25s;
-  }
-
-  &5 {
-    height: 356px;
-    background-image: url('../../public/images/mountains/mountain5.svg');
-    background-position-y: 160px;
-    animation-duration: 30s;
-  }
-}
-
-@keyframes mountain-move {
-  to {
-    background-position-x: -690px;
-  }
+header.show {
+  transform: translateY(0);
 }
