@@ -1,7 +1,7 @@
 import Connect from '../components/Connect';
 import './MainW.scss';
 
-export default function Main() {
+export default function Main({ openQR }) {
   return (
     <main>
       <h1>О КОМПАНИИ</h1>
@@ -38,7 +38,7 @@ export default function Main() {
             >
               <img alt="tg" src="./images/tg.svg" />
             </a>
-            <button>
+            <button onClick={openQR}>
               <img style={{position: "relative", width: "30px", top: "-2px"}} alt="wechat" src="./images/wechat.png" />
             </button>
           </div>

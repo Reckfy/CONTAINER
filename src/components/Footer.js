@@ -1,37 +1,10 @@
 import './Footer.scss';
 import { MAIL } from '../App';
-import { useState } from 'react';
 
-function Footer() {
-  const [showQR, setShowQR] = useState(false);
-
-  const closeQR = () => {
-    setShowQR(false);
-  };
-
-  const handleWeChatClick = (e) => {
-    e.preventDefault();
-    setShowQR(!showQR);
-  };
+function Footer({ openQR }) {
 
   return (
     <div className="footer">
-      {showQR && (
-        <div 
-          className="qr-overlay" 
-          onClick={closeQR}
-        />
-      )}
-      
-      {showQR && (
-        <img 
-          className="qr" 
-          src="/images/qr-wechat.jpg" 
-          alt="QR WeChat"
-          onClick={(e) => e.stopPropagation()} 
-        />
-      )}
-      
       <div className="contacts_footer">
         <div className="contact">
           <h2>Контакты</h2>
@@ -58,7 +31,7 @@ function Footer() {
               <img alt="" src="./images/tg.svg" />
             </a>
             <button
-              onClick={handleWeChatClick}
+              onClick={ openQR }
             >
               <img style={{position: "relative", width: "22px", top: "-1px"}} alt="" src="./images/wechat.png" />
             </button>
