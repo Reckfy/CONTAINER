@@ -38,11 +38,9 @@ export default function Main() {
             >
               <img alt="tg" src="./images/tg.svg" />
             </a>
-            <a
-              href=""
-            >
+            <button>
               <img style={{position: "relative", width: "30px", top: "-2px"}} alt="wechat" src="./images/wechat.png" />
-            </a>
+            </button>
           </div>
         </div>
       </div>

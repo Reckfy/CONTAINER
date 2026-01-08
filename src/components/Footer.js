@@ -57,12 +57,11 @@ function Footer() {
             >
               <img alt="" src="./images/tg.svg" />
             </a>
-            <a
-              href="#"
+            <button
               onClick={handleWeChatClick}
             >
               <img style={{position: "relative", width: "22px", top: "-1px"}} alt="" src="./images/wechat.png" />
-            </a>
+            </button>
           </div>
         </div>
         <div className="contact">
