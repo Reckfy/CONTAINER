@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://193.200.74.213:5000/",
+  "proxy": "https://ilc-container.com/",
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",

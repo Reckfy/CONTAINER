@@ -4,7 +4,7 @@ import './MainW.scss';
 export default function Main() {
   return (
     <main>
-      <h1>КОМПАНИЯ</h1>
+      <h1>О КОМПАНИИ</h1>
       <div className="greyField">
         <div className="textBlock">
           <p>
@@ -12,10 +12,10 @@ export default function Main() {
             сохранности из точки А в точку Б.
           </p>
           <p>
-            Мы доставляем грузы из Китая, гарантируя нашим
-            клиентам лучшие условия. Для нас важно не только обеспечить
-            сохранность груза и быструю доставку, но и быть на связи с клиентом
-            на каждом этапе, поддерживать прозрачность сделки.
+            Мы доставляем грузы из Китая, гарантируя нашим клиентам лучшие
+            условия. Для нас важно не только обеспечить сохранность груза и
+            быструю доставку, но и быть на связи с клиентом на каждом этапе,
+            поддерживать прозрачность сделки.
           </p>
         </div>
         <div className="directorInfo">
@@ -24,11 +24,24 @@ export default function Main() {
           <p>Генеральный директор компании CONTAINER</p>
           <b>Контакты</b>
           <div>
-            <a href="https://wa.me/79246708370" target="_blank" rel="noopener noreferrer nofollow">
+            <a
+              href="https://wa.me/79246708370"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               <img alt="wa" src="./images/wa.svg" />
             </a>
-            <a href="https://t.me/lc_container" target="_blank" rel="noopener noreferrer nofollow">
+            <a
+              href="https://t.me/lc_container"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               <img alt="tg" src="./images/tg.svg" />
+            </a>
+            <a
+              href=""
+            >
+              <img style={{position: "relative", width: "30px", top: "-2px"}} alt="wechat" src="./images/wechat.png" />
             </a>
           </div>
         </div>
@@ -74,10 +87,20 @@ export default function Main() {
           <Connect />
         </div>
       </div>
-      <div className='channel_block'>
+      <div className="channel_block">
         <h2>ГРУППА ТЕЛЕГРАМ</h2>
-        <p>Переходите в нашу группу Телеграм. Там мы выкладываем интересные предложения, делимся информацией о методах нашей работы, рассказываем новости, связанные с миром логистики!</p>
-        <a href='https://t.me/logistic_container' target="_blank" rel="noopener noreferrer nofollow">Кликай и переходи к нам!</a>
+        <p>
+          Переходите в нашу группу Телеграм. Там мы выкладываем интересные
+          предложения, делимся информацией о методах нашей работы, рассказываем
+          новости, связанные с миром логистики!
+        </p>
+        <a
+          href="https://t.me/logistic_container"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Кликай и переходи к нам!
+        </a>
       </div>
     </main>
   );
